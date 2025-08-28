@@ -1,0 +1,2 @@
+25 18 * * * /home/dev/field/customer/scripts/script.sh
+30 18 * * * /home/dev/field/customer_account/scripts/script.sh

@@ -1,0 +1,4 @@
+*.sql
+logs/
+backup/
+data_types.txt

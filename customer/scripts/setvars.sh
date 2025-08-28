@@ -1,0 +1,4 @@
+export SCHEMA_NAME='"IFRM_UDS"'
+export UPDATED_TABLENAME='"CUSTOMER_STAGE_MIGRATION"'
+export query="SET search_path to '$SCHEMA_NAME'; SELECT row_to_json($UPDATED_TABLENAME) FROM $UPDATED_TABLENAME"
+export PGPASSWORD='Frc_f!eld@pu!se2024'
