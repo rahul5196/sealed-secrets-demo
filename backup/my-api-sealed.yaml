@@ -1,0 +1,15 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: my-api-secret
+  namespace: default
+spec:
+  encryptedData:
+    api-token: AgAxatAHQG1O1q/GFhf13BAmQn3vmwaieqZ2HuMNd6bnXii/eX6/u/nwTbmDpauwK1T9wQcXUGBTb1CVnXLDXYtyP0lTBI+pc/ThclaH1zjPjL7u2ZUhqr2Bk+NNlb+ojRsjMCf2OWq+KmJJvsh7BVKNNtYOkEeZ78Y50nyFfGCYXETcLAi5TKsThEjQwj7RFSKWL7P9E6P/bBYI5hZRcPMDKs5SvWlgG3aahAGMYCQtqymjKuqwXBfrdVRz/A3I8BDTUCcKgHqovpiwHzG7EhoqEOkBtJ0MCutpqoTXGgqqB2eC7EaDENkBvdVp5dmHLCjY09DvNS6DOQPudxYVXh6/5HGE7tv0RKolLHpFOfamH5H8dqnxy277vfE8ZHUqo99SgtZiLp2apvLO6X4m9mtAT/OO8EhhvnKq7b7aqJLQkXw8gGlSB+JOurUXXzD7sPePbifqCFT7uGuDTz5c3QaFIE+bVdSjwaPwjAfztDfhDHS0ZYteSsmdAMpC6y3FEmjOCauHQo9oF/74QIdboxLivfTUvj9X8Z4iOXUtvPprN3Q24AEzmih7eunU38dcQ/DcAr511Q5GIi2Fhj37c6hO5WsskYEHCc388nUROmxN/yFeM8t+/KNgX4xCkJgo7OPVzO55NGk5Cg5m++65kc9wkMGEshfyWfTK+K+V+v21ossqRlbMniH4nIKP+bXhQI17dGH5vbOxlIipfP5Mk6BBEJqHmoG/qXON
+  template:
+    metadata:
+      creationTimestamp: null
+      name: my-api-secret
+      namespace: default

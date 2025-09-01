@@ -1,0 +1,12 @@
+kind: EncryptionConfiguration
+apiVersion: apiserver.config.k8s.io/v1
+resources:
+  - resources:
+      - secrets
+    providers:
+      - aescbc:
+          keys:
+            - name: key1
+              # This is a base64 encoded 32-byte secret key (must be 32 bytes)
+              secret: j+3jRMobUMUTwlDcrHdBHRUc3ZeYBfxx4t4aaRDZ56k=
+      - identity: {}
