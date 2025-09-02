@@ -1,0 +1,7 @@
+# dev-sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: dev-sa
+  namespace: demo
+

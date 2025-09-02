@@ -1,0 +1,6 @@
+# monitor-sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: monitor-sa
+  namespace: demo

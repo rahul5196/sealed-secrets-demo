@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+      annotations:
+        vault.hashicorp.com/agent-inject: "true"
+        vault.hashicorp.com/role: "myapp-role"
+        vault.hashicorp.com/agent-inject-secret-db.txt: "secret/data/myapp/db"
+        vault.hashicorp.com/agent-inject-template-db.txt: |
+          {{- with secret "secret/data/myapp/db" -}}
+          username={{ .Data.data.username }}
+          password={{ .Data.data.password }}
+          {{- end -}}
+    spec:
+      serviceAccountName: myapp-sa
+      containers:
+      - name: app
+        image: busybox
+        command: ['sh', '-c', 'echo "pod started"; while true; do sleep 30; done']

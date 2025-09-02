@@ -1,0 +1,14 @@
+# monitor-role.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: demo
+  name: monitor-role
+rules:
+- apiGroups: [""]  # core API
+  resources: ["pods","pods/log","configmaps"]
+  verbs: ["get","list","watch"]
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  verbs: ["get","list","watch"]
+# Do NOT include "pods/exec" or "delete" or "secrets" (optional)
